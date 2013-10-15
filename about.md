@@ -5,6 +5,8 @@ title: Hi.
 tags: [about]
 ---
 
+<img src="{{site.owner.avatar}}" alt="profile" style="width: 100px;">
+
 ## I am a
 - Web Developer
 - Triathlete

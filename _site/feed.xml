@@ -5,7 +5,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2013-10-16T04:25:24+09:00</updated>
+<updated>2013-10-16T04:52:37+09:00</updated>
 <id>/</id>
 <author>
   <name>Takashi Nakagawa</name>
@@ -15,21 +15,424 @@
 
 
 <entry>
-  <title type="html"><![CDATA[Test Post]]></title>
-  <link rel="alternate" type="text/html" href="/articles/test-post" />
-  <id>/articles/test-post</id>
-  <published>2013-08-17T00:00:00+09:00</published>
-  <updated>2013-08-17T00:00:00+09:00</updated>
+  <title type="html"><![CDATA[東京に1ヶ月半いました]]></title>
+  <link rel="alternate" type="text/html" href="/days-in-tokyo" />
+  <id>/days-in-tokyo</id>
+  <published>2013-03-31T00:00:00+09:00</published>
+  <updated>2013-03-31T00:00:00+09:00</updated>
   <author>
     <name>Takashi Nakagawa</name>
     <uri></uri>
     <email>tak1240@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney&#39;s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.&lt;/p&gt;
+  <content type="html">&lt;p&gt;2月の初めから一昨日ぐらいまで、東京のBeatrobo(https://beatrobo.com)というところでアルバイト(インターン?)をしていました。&lt;/p&gt;
 
-&lt;p&gt;Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.&lt;/p&gt;
+&lt;p&gt;BeatroboではJavaScriptでは主にJavaScriptでフロントエンドを書いたりしていました。&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;/articles/test-post&quot;&gt;Test Post&lt;/a&gt; was originally published by Takashi Nakagawa at &lt;a href=&quot;&quot;&gt;TAK0303&lt;/a&gt; on August 17, 2013.&lt;/p&gt;</content>
+&lt;p&gt;新しい機能の追加をしたり、バグ修正をしたり...という感じに過ごしていました、&lt;/p&gt;
+
+&lt;p&gt;Beatroboに行った理由は単にBeatroboがめっちゃカッコイイサービスだなーと思って、偶然知り合いの知り合いがBeatroboのCEOだったりして、なんとか働かせてもらえました。&lt;/p&gt;
+
+&lt;p&gt;エンジニアリングも大規模なJavaScriptを書いたのは初めてだったし、ちゃんとエンジニアでバイトをするのも初めてだったので、良かったのですが、
+それ以上にいろんな人と会ったり、話す機会があって、それが自分にとっては一番良かったなーと思います。&lt;/p&gt;
+
+&lt;p&gt;開発のことはもし聞きたかったら直接聞いてください:D&lt;/p&gt;
+
+&lt;p&gt;一番良かったのが、大学に行くモチベーションが出来たことかな〜と思います&lt;/p&gt;
+
+&lt;p&gt;一年前休学したときは、なんで大学行ってるのか分からなくて休学して、１年間こうやって自由に過ごしてきたけど、結局大学に戻るのは決めていたので、なんとかモチベーションを出さないとやばいな～っておもってました。&lt;/p&gt;
+
+&lt;p&gt;で、なんで大学に戻るかというと、単純に勉強したくなったからです。&lt;/p&gt;
+
+&lt;p&gt;プログラムがなんで動いてるかとか、プログラミングの歴史とか、数学もやりたい(必要な気がしてきた)、あとはロボットの勉強がしたいです。&lt;/p&gt;
+
+&lt;p&gt;１年前はこういうことを思わなかったので、そういう意味で今度は大学に行ってもやってけるんじゃないかな〜って感じです&lt;/p&gt;
+
+&lt;p&gt;そういう意味であと３年も大学に行かてもらえるのはすごくラッキーだし、この機会を生かしたいな〜と思います&lt;/p&gt;
+
+&lt;p&gt;4月からはそういう勉強をしながら、エンジニアのバイトもしながら〜って感じにやっていきます。あと作りたいものがあるのでそれもやりながら&lt;/p&gt;
+
+&lt;p&gt;Beatroboで働けたのは本当に運がよかったな〜と思います。
+バイトなのにカナダにもつれていってもらったりもしました。&lt;/p&gt;
+
+&lt;p&gt;やっぱり仕事は何をするか、よりも誰とするか、だと思いました。
+あ、でもやっぱりそれに加えて作っているものもクールだったら、いうことはないとおもいます！&lt;/p&gt;
+
+&lt;p&gt;なんにせよ、お世話になった方々、ありがとうございました、これからもよろしくお願いします！&lt;/p&gt;
+
+&lt;p&gt;ボクは目標とか、夢とかはまだあんまりないのですが、１年前よりかはだいぶましだと思ってます！&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/days-in-tokyo&quot;&gt;東京に1ヶ月半いました&lt;/a&gt; was originally published by Takashi Nakagawa at &lt;a href=&quot;&quot;&gt;TAK0303&lt;/a&gt; on March 31, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[数ヶ月の振り返り(2011/10~2012/5)]]></title>
+  <link rel="alternate" type="text/html" href="/articles/review" />
+  <id>/articles/review</id>
+  <published>2012-11-21T00:00:00+09:00</published>
+  <updated>2012-11-21T00:00:00+09:00</updated>
+  <author>
+    <name>Takashi Nakagawa</name>
+    <uri></uri>
+    <email>tak1240@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;evernote見てたらずっと前に書いた振り返りの日記があったので載せた&lt;/p&gt;
+
+&lt;p&gt;最近気が緩みがちなので反省の意味も込めて。&lt;/p&gt;
+
+&lt;p&gt;書いたのは今年(2012年)の5月ぐらい&lt;/p&gt;
+
+&lt;h2&gt;はじめ&lt;/h2&gt;
+
+&lt;p&gt;ボクがプログラミングを始めたのが去年の9月、&lt;br&gt;
+ちょうど8ヶ月前。最初に始めた理由は&lt;/p&gt;
+
+&lt;p&gt;「なんかカッコよさそうだから」&lt;/p&gt;
+
+&lt;p&gt;って理由で始めてみた。&lt;/p&gt;
+
+&lt;p&gt;ていうのもプログラミングへのイメージが映画とかにでてくるハッカーとかのイメージだったから。&lt;br&gt;
+(この頃はハッカーっていうのもハッキングをする人、みたいなイメージしかなかった)&lt;br&gt;
+で、そのころプログラミング始めてた友達(@takehiro0740)になにをすればいいのか、みたいなのを聞いて始めたのが最初だった。&lt;/p&gt;
+
+&lt;p&gt;はじめは教えてもらった初音ミクのC言語講座、みたいな動画を勧められたけど、&lt;br&gt;
+正直全然面白くなくて、面白さがわからなかった。&lt;/p&gt;
+
+&lt;p&gt;で、実際になんの言語をしたらいいのか(この時もうC言語はヤル気がなくなっていた)、&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;って言うのを聞いた時に初めてphpっていう言語があるよってことを知った。&lt;br&gt;
+それまではphpの存在すら知らなくて、実際どんなことをするのかさえ知らなかった。&lt;br&gt;
+ただその時に”mixiみたいなサイトを作れるようになるよ”みたいな感じにきいて、&lt;br&gt;
+それなら面白そうかな、っていうかC言語よりはマシかなみたいな感じでphpを勉強しだした。&lt;br&gt;
+でも、最初に渡された参考書,perfectPHPがあまりにも難しくて積みに積んだ。&lt;br&gt;
+環境構築で2週間、”hello world!”するのにまた3日ぐらいかかった。&lt;br&gt;
+正直環境構築が今でも一番めんどくさいと思ってる。&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;で、なんとかhello worldまでは行ったものの、そこからが進まない。htmlすら知らなかったので何をすればいいのかもわからず、ひたすらにコードを写してた。&lt;br&gt;
+写しては調べて、の繰り返しで根気のないボクは何回もやめてはやり直してを繰り返して、&lt;br&gt;
+結局ほとんど終わらずに1ヶ月ぐらいがたっていた。&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;その時に偶然友達の先輩がプログラミング教室、(それもhtmlとphp!)を開くとさんいうのでそこに飛びついた(その時はもうほとんどヤル気が0だったけど、中途半端におわるのも癪だったから。)&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;そこで初めてcssの存在を知って、phpでfacebookと連携したアプリケーションを作った。（構造は全くわからなかった。）&lt;br&gt;
+何よりも一緒に勉強する人がいるっていうのはとても新鮮で、楽しかった。
+そこで思ったのは、誰もが目標を持ってプログラミングを勉強しているっていうこと。&lt;br&gt;
+プログラミングは所詮ツールで、自分の目的を達成するための手段なんだ、とこの時初めて思った。&lt;br&gt;
+いまでもこの考えは変わらないし、これからもそうだと思う。&lt;br&gt;
+でもこのころのボクは何か目標があってプログラミングをしているわけではなかった。&lt;br&gt;
+単なる暇つぶしにやっていて、目標とかもなかった。ただ、この時から思うようになったのは、自分のアイデアを具現化したい、ということ。&lt;br&gt;
+アイデアだけがあっても意味が無いし、なにより何かを作りたかった。&lt;br&gt;
+ボクは絵をかいたりするのが好きで、なにかを作り出すっていうことは好きだった。&lt;br&gt;
+だから自分のアイデアを実現する、という目標で、そこから勉強するようになった。この考えも変わってない。&lt;br&gt;&lt;/p&gt;
+
+&lt;h2&gt;campusへ&lt;/h2&gt;
+
+&lt;p&gt;でも勉強はそんなに早くは進まず、今年の1月になってやっと参考書が1冊終わったぐらいだった。&lt;/p&gt;
+
+&lt;p&gt;フレームワーク(プログラミングのツールみたいなもの)一応わかります、って感じだった。その頃友達(takehiro0740)は&lt;a href=&quot;http://favolist.in/&quot;&gt;favolist&lt;/a&gt;っていうサービスをリリースしていて、正直焦ってた、自分は何もしてない！って感じで。&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;同時にこの頃、学校の授業が全然面白く思えなくなってしまった。ボクは生命科学部で、プログラミングは全くしない学科でカリキュラムも厳しかった。&lt;br&gt;
+テストになったらみんな図書館にこもって一日中勉強するっていうような生活だった。でも授業自体に魅力を感じなくなってしまってからはその生活が無意味に思えてしまって、全然身が入らなかった。&lt;br&gt;
+単にボクが怠け者で、落ちこぼれだったていうのが大きいと思うけど。成績自体は全くよくなかった。&lt;/p&gt;
+
+&lt;p&gt;そんな中、プログラミングをはじめて、情報系に興味があったから情報理工学部に転籍しよう、ってなって転籍した。&lt;/p&gt;
+
+&lt;p&gt;いまでもこの決断が良かったのかはわからない、っていうのも今ボクが転籍してすぐ休学してしまったから(campusで働くため、勉強のため)。正直逃げただけの部分もあったと思う。でも後悔はしてない。&lt;/p&gt;
+
+&lt;p&gt;そんな時にCampusっていうサービスの開発をしないか、っていう話をもらった。これもtakehiro0740から。思えばプログラミング始めてからずっとなんか一緒にしている気がする。教えてもらったことばかりなので感謝してる。&lt;/p&gt;
+
+&lt;p&gt;で、campusの話しをもらって開発の話を國重さんから聞いた時、正直めっちゃワクワクしたけど、こんなのつくれない！というのが正直なとこだった。この時ボクは何も作ったことがなくて、あるとすれば一冊だけ終わらせた参考書のサンプルだけ。でも作ってみたくてその話を受けることにした。この時は1月の終わりくらい。&lt;/p&gt;
+
+&lt;p&gt;ていってもボクはなんにも知識がないままなのにエンジニアとして開発に参加して、しかもこの時エンジニアはボクを含めて3人、それも開発経験者は1人だけ、っていう状況だった。
+使うフレームワークはZendFramework。使ったことどころか聞いたこともなかった。毎日新しい事だらけで、一日中参考書を見ていても全然進まなかった。このときも参考書のサンプルをずっと写経してた。というよりそれしかできなかった。ほんとに1日中PCの前にいた。&lt;/p&gt;
+
+&lt;p&gt;で、2週間ぐらいかけて参考書を読み続けて作ったのが学生団体検索サイトの&lt;a href=&quot;http://campus-web.jp/Bridge&quot;&gt;Bridge&lt;/a&gt;&lt;br&gt;
+いま見たらコードが汚すぎて見れたものじゃない、けどこの時の全力出して作ったから達成感が半端無くて、自分でサービスを作るっていうことの楽しさがわかった。&lt;br&gt;
+正直これが知れただけでも価値があったと思う。技術的には全然だけど。&lt;/p&gt;
+
+&lt;p&gt;そこからは1サイトを１週間ぐらいで形にできるようになってきた。１回目の経験というのがとても生きたと思う。&lt;br&gt;
+最終的に関わったサイトは今の時点でcampusではwordpress以外のところはすべて、phpとhtml、css、少しだけどjsも書けるようになった。これが４月のはじめぐらい。&lt;br&gt;
+で、保守とか改善、新しいサイトのローンチとかをやって、今。
+正直あっという間の２ヶ月間だった。最初はphpもまともに触れなかったのに一応書ける程度までにはなれて、javascriptでajaxの通信とかを書けるようになれた。wordpress(ブログみたいなの)も簡単なサイトだけど学生団体向けに作ることもできた。(http://delta-kansai.net/)&lt;/p&gt;
+
+&lt;h2&gt;休学して&lt;/h2&gt;
+
+&lt;p&gt;campusを公開してから、この2ヶ月(4月から5月末まで)はずっと勉強会に行ったり,新しいことを勉強したり(javasciptとか)&lt;br&gt;campusの改良したりをしてた。思ったのは、全然時間が足りないっていうこと、時間は無限じゃないんだなーとか当たり前のことを考えたりしてた。&lt;br&gt;
+休学してから、1日1日がほんとに短くて、充実してるけど、よく「自分は本当に成長できているのか」とういことを考えたりする。&lt;br&gt;休学するまえは学校の授業とかで時間が拘束されてて、今日、自分が何をして、なにを成し遂げたのか、ということを考えづらいと思う。&lt;br&gt;休学中は、どこまでも自由に動けるけど、その分自分が動かないと何もできない。大学に行って授業を受けない分、自律しないとやっていけない。僕自身、休学してから、「今日自分が何をしたのか」って考えて、反省することが多い。時間は有限だ、ということを今更ながら実感している。&lt;/p&gt;
+
+&lt;p&gt;今の自分が何をできるかと言われると、簡単なwebサイトが作れます。としか言えない。自分が胸をはって「これが自分の強みです。」といえるようなシロモノではないし、これからはもっと勉強しないといけないし、していきたい。この数ヶ月で一番得たものがなにかと言えば、ボクは向上心だと思う。まだまだ勉強して、これからもいろんなことに挑戦したい。&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/articles/review&quot;&gt;数ヶ月の振り返り(2011/10~2012/5)&lt;/a&gt; was originally published by Takashi Nakagawa at &lt;a href=&quot;&quot;&gt;TAK0303&lt;/a&gt; on November 21, 2012.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[ボクはなんでwebサービスを作っているんだろう]]></title>
+  <link rel="alternate" type="text/html" href="/articles/kakidashi" />
+  <id>/articles/kakidashi</id>
+  <published>2012-10-24T00:00:00+09:00</published>
+  <updated>2012-10-24T00:00:00+09:00</updated>
+  <author>
+    <name>Takashi Nakagawa</name>
+    <uri></uri>
+    <email>tak1240@gmail.com</email>
+  </author>
+  <content type="html">&lt;h3&gt;「本の書き出し」を作りました。&lt;/h3&gt;
+
+&lt;p&gt;先週の月曜日、&lt;a href=&quot;http://kakidashi.com&quot;&gt;本の書き出し&lt;/a&gt;というサイトをリリースしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/kakidashi_1.png&quot; alt=&quot;kakidashi.com&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;自分の好きな本の書き出しを投稿して、みんなで共有しあうというコンセプトのもと、このサイトを作りました。&lt;/p&gt;
+
+&lt;p&gt;このサイトの元となったのは新宿紀伊国屋本店が行なっていた「本の枕フェア」、というフェアです。&lt;/p&gt;
+
+&lt;p&gt;本の書き出しを見るだけでワクワクするそんなサイトを目指し、実際に多くの人に楽しんでいただけて嬉しい限りです。&lt;/p&gt;
+
+&lt;p&gt;今回は、このサービスの作成を通じてボクが思ったこと、考えたことをまとめてみたいと思います。&lt;/p&gt;
+
+&lt;h3&gt;好きなことがwebに&lt;/h3&gt;
+
+&lt;p&gt;このサイトを作ってるとき、このブログ記事を読みました&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.livedoor.jp/kensuu/archives/54215643.html&quot;&gt;「ハッカー文化」と「オタク文化」の違い、または手段の目的化によるイノベーション&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ボクの一番好きなwebサービスは&lt;a href=&quot;http://pixiv.net&quot;&gt;pixiv&lt;/a&gt;です。&lt;/p&gt;
+
+&lt;p&gt;これはwebサービスを作り始める前からもそのあとも変わってません。&lt;/p&gt;
+
+&lt;p&gt;でもボクはこれまで自分がなんでpixivが好きなのか、あまりよくわかっていませんでした。というより、うまく言葉にすることができませんでした。&lt;/p&gt;
+
+&lt;p&gt;で、このブログを読んで&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;オタク文化とは何か？それは、一言でいうと「手段のためなら目的を選ばない」というところです。&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;これを読んで、ボクがpixivが好きな理由がはっきりしました。&lt;/p&gt;
+
+&lt;p&gt;ボクは&quot;絵を描く&quot;という&quot;手段&quot;が好きです。そしてpixivはその&quot;手段&quot;を&quot;目的&quot;として作られたサイトでした。&lt;/p&gt;
+
+&lt;p&gt;ボクの好きなことがそのままweb上にある、そんなサイトです。&lt;/p&gt;
+
+&lt;h3&gt;手段が目的&lt;/h3&gt;
+
+&lt;p&gt;よく、「手段と目的を入れ違えている。」なんて言葉を聞きます。たいていは、悪いイメージの言葉で。&lt;/p&gt;
+
+&lt;p&gt;手段を目的にする、というさっきの記事を読んでから、それはいいことなのか、悪いことなのかずっと考えていました。&lt;/p&gt;
+
+&lt;p&gt;そんなときこんな記事を見つけました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://d.hatena.ne.jp/kobeni_08/20120522/1337699448&quot;&gt;こどもは手段が目的&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;大人は、子供たちのやることを「遊び」と呼び、「仕事」と区別している。&lt;br&gt;仕事とは一般的に、利益創出を「目的」としたビジネス全般をさすわけで、仕事におけるすべての「手段」は「お金を儲けること」という目的から基本的には逃れられない。（企業理念が目的で、利益は手段です。と、偉い人には言われてしまいそうだが、それにしては利益の存在感デカすぎじゃないのかと思いますねえ、ええ。）&lt;br&gt;大人の世界で目的を忘れ手段に没頭しようものなら、即座に嘲笑の対象になる。「手段が目的化しちゃってんじゃないの？」とか、「仕事のための仕事じゃん」なんて言われたりする。それは簡単に言えば「お金を稼ぐという目的に対して、効率が悪い、無駄が多い」という意味である…ことが多い気がするんだけど、どうだろう。&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;手段が目的になるものは大抵「遊び」とか「趣味」と言われたりします。&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;大人の世界で目的を忘れ手段に没頭しようものなら、即座に嘲笑の対象になる。「手段が目的化しちゃってんじゃないの？」とか、「仕事のための仕事じゃん」なんて言われたりする。&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;ここでいう「大人の世界」というのは会社とかでしょう。&lt;/p&gt;
+
+&lt;p&gt;確かに僕自身も絵は趣味です。決して売れるようなものではないし、これで食べていけるとも思わない。&lt;/p&gt;
+
+&lt;p&gt;趣味としてならだれもなにも言わないけど、いざそれを&quot;目的&quot;にして没頭しようとすると周りから止められたり笑われたりする。それは周りから見れば採算が取れないからだし、お金を儲けるのには非効率だからだし、無駄なことのように見えるから。&lt;/p&gt;
+
+&lt;p&gt;じゃあpixivは無駄なサイトなのでしょうか。ボクはそうは思いません。&lt;/p&gt;
+
+&lt;p&gt;好きになるwebサービスは、自分の現実の体験をもとに決まってくると思います。&lt;/p&gt;
+
+&lt;p&gt;webは現実の延長線上だったり、現実を拡張するためにあります。&lt;/p&gt;
+
+&lt;p&gt;現実で好きなものがweb上にその&quot;好きなもの&quot;のままあるとしたら、ボクはそれほど良いサービスはないんじゃないかとこの記事を読んで思いました。&lt;/p&gt;
+
+&lt;p&gt;そのとき作っていた「本の書き出し」を見つめなおすいい機会にもなりました。&lt;br&gt;
+それまでは「本の枕フェアに感動したから」という理由だけで作っていたのですが、もっと純粋に良い本を見つけた時のうれしさ、ワクワクをそのまま伝えられるような構成を位置から考え直すことが出来ました。&lt;/p&gt;
+
+&lt;p&gt;結果的にすごい多くの方にみてもらえたのも、こうやって考えなおすことができたからだと思います。&lt;br&gt;
+事実、最初はいまのようなデザインとはかけ離れたものでした。&lt;/p&gt;
+
+&lt;h3&gt;それで、ボクはなんでwebサービスを作っているんだろう&lt;/h3&gt;
+
+&lt;p&gt;これまでwebサービスを作っていて感じたこと&lt;/p&gt;
+
+&lt;p&gt;ボクはwebサービスを作るときに大事なのは「自分が心から好きなモノを作れるかどうか」だと思っています。&lt;/p&gt;
+
+&lt;p&gt;自分が一番好きなものは自分のなかで一番情熱を持ち、一番思い入れがあるものだと思う。だからこそ他の人には出来ないサービスが作れると思います。&lt;/p&gt;
+
+&lt;p&gt;手段を目的と入れ違って、没頭して、自分が好きで好きで仕方ないものをwebサービスとして出す。これがボクがいま思う最高のwebサービスだと思います。&lt;/p&gt;
+
+&lt;p&gt;自分の感性がよっぽど浮世離れしてない限り、その情熱は必ず人を動かせるし、感動されられる。実際に今回つくった「本の書き出し」は多くのひとに楽しんでいただけました。&lt;/p&gt;
+
+&lt;p&gt;webは誰でも手を出しやすく、誰にでもイノベーションを起こせる可能性がある。だから手段と目的を入れ違えて、必死にそれに没頭する価値がある。&lt;/p&gt;
+
+&lt;p&gt;ボクは、イノベーションはその人の一番の情熱から生まれるんだと信じています。&lt;/p&gt;
+
+&lt;p&gt;そしてそれはその人の一番好きな&quot;手段&quot;から生まれると思う。&lt;/p&gt;
+
+&lt;p&gt;だからボクは自分の大好きなものをカタチにしたい、だからボクはwebサービスを作ってます。&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/articles/kakidashi&quot;&gt;ボクはなんでwebサービスを作っているんだろう&lt;/a&gt; was originally published by Takashi Nakagawa at &lt;a href=&quot;&quot;&gt;TAK0303&lt;/a&gt; on October 24, 2012.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[個人的におすすめなSublimeTextのプラグイン]]></title>
+  <link rel="alternate" type="text/html" href="/articles/sublime-packages-i-like" />
+  <id>/articles/sublime-packages-i-like</id>
+  <published>2012-10-13T00:00:00+09:00</published>
+  <updated>2012-10-13T00:00:00+09:00</updated>
+  <author>
+    <name>Takashi Nakagawa</name>
+    <uri></uri>
+    <email>tak1240@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;&lt;a href=&quot;http://tak0303.github.com/2012/09/25/how-to-use-sublime.html&quot;&gt;前回書いたSublime Textの記事&lt;/a&gt;が結構いろんな方に読んでもらえて嬉しい限りです.&lt;/p&gt;
+
+&lt;p&gt;今回はSublime Textを使っていてボクが個人的におすすめするプラグインとその使用方法などを書いていきたいと思います.&lt;/p&gt;
+
+&lt;h2&gt;1. Twitter Bootstrap Snippets&lt;/h2&gt;
+
+&lt;p&gt;名前の通り,twitter bootstrapのコードを集めたsnippetです.&lt;/p&gt;
+
+&lt;p&gt;前回の記事でも紹介したのですが,個人的にかなり気に入っているので紹介します.&lt;/p&gt;
+
+&lt;p&gt;これだけで簡単なサイトのデザインが数行のsnippetのコードで作れてしまうので,お勧めです!&lt;/p&gt;
+
+&lt;p&gt;吐き出されたコードを見るだけでも参考になったりもするのではないでしょうか.&lt;/p&gt;
+
+&lt;p&gt;一つだけ注意したいのは,自動で吐き出されるtwitter bootstrapのjsのリンク(後でも説明します)のバージョンが少し古いこと.
+最新のバージョンを使いたい場合は自分でリンクを書き換える必要があります.&lt;/p&gt;
+
+&lt;p&gt;インストールはpackage controlから twitter bootstrapで検索すれば出てきます.&lt;/p&gt;
+
+&lt;p&gt;snippetのコマンド一覧はコマンドパレット(cmd + shift + p)でbootstrapで検索すればみることができます.&lt;/p&gt;
+
+&lt;p&gt;こんな感じ&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/sublime_6.png&quot; alt=&quot;tbs&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;一応,使えそうなのをいくつか紹介しておきます.
+すべて入力後,tabキーでsnippetが展開されます&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;tbnavbar&lt;/p&gt;
+
+&lt;p&gt;よくあるナビゲーションバーを簡単に作成出来る. navbar-fixed-topのクラスだけ足してやると良いかも&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;tbcarousel&lt;/p&gt;
+
+&lt;p&gt;スライドショー. 画像はデフォルトでよくわからない画像が入っているのでお好みで.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;tbaccordion&lt;/p&gt;
+
+&lt;p&gt;アコーディオン. クリックしたら下にスライドしてコンテンツが出てくるアレ.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;tbalert&lt;/p&gt;
+
+&lt;p&gt;アラート表示. 汎用性が高いのでいろんなところに使えそう.tbnoticeとかもある.色が違う.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;tbhero&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://twitter.github.com/bootstrap/examples/hero.html&quot;&gt;このページ&lt;/a&gt;がそのまま作れる.用途はないかもだが,面白い&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;2.Gist&lt;/h2&gt;
+
+&lt;p&gt;GistをSublimeTextから操作するプラグインです.&lt;/p&gt;
+
+&lt;p&gt;触ってみたら便利だったので.&lt;/p&gt;
+
+&lt;p&gt;インストールはおなじみpackage controlから.&lt;/p&gt;
+
+&lt;p&gt;インストールしたら、メニューバーから, preference　→　Package Settings →　Gist → Settings Userで Gist(Github)のユーザ名パスワードを入力. その他の項目は必須ではないので割愛させて頂きます.&lt;/p&gt;
+
+&lt;p&gt;操作は簡単 Gistに投稿したいファイルを開いて、コマンドパレットから.Gistを検索.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/sublime_7.png&quot; alt=&quot;Gist&quot;&gt;
+(ボクのはGitが最初になってますが...)&lt;/p&gt;
+
+&lt;p&gt;Create Public(Private) Gistを選択,そしたらGistが作成されます.(作成された時,そこに自動で飛べばもっといいんですが...)&lt;/p&gt;
+
+&lt;p&gt;作成はこれだけ,簡単です!&lt;/p&gt;
+
+&lt;p&gt;もちろんいまあるGistの編集もできます.&lt;/p&gt;
+
+&lt;p&gt;コマンドパレットから Gist→ Open Gistで自分のGist一覧がでるので,そこから好きなものを選択,するとSublime上にGistが開けます.&lt;/p&gt;
+
+&lt;p&gt;あとはそれを好きに編集して、そのままUpdate Gist, Delete Gistなどが実行できます.&lt;/p&gt;
+
+&lt;p&gt;そして,別のファイル上にGistのコードを展開することもできます.&lt;/p&gt;
+
+&lt;p&gt;Gist →　Insert GistでGistを選択,するといま開いているファイルにGistのコードが挿入されます.&lt;/p&gt;
+
+&lt;p&gt;簡易スニペットのような形で使うこともでき,便利!&lt;/p&gt;
+
+&lt;h2&gt;3.GoTo Documentation&lt;/h2&gt;
+
+&lt;p&gt;php,javascript(coffeescript),python,Clojure,Go,Smarty,Ruby on Railsのドキュメントが検索できるプラグインです.&lt;/p&gt;
+
+&lt;p&gt;インストールはpackage controlから.&lt;/p&gt;
+
+&lt;p&gt;インストールしたらまずはキーバインドを設定します.&lt;/p&gt;
+
+&lt;p&gt;しなくてもいいのですが,ドキュメントは素早くみたいもの,設定することをおすすめします(しない場合はコマンドパレットから実行できます)&lt;/p&gt;
+
+&lt;p&gt;ボクは&lt;a href=&quot;https://github.com/kemayo/sublime-text-2-goto-documentation&quot;&gt;githubのリポジトリ&lt;/a&gt;にかいているキーバインドをそのまま使っています&lt;/p&gt;
+
+&lt;p&gt;設定は preference → KeyBindings Userに書きます.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ &quot;keys&quot;: [&quot;super+shift+h&quot;], &quot;command&quot;: &quot;goto_documentation&quot; }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;こんな感じ.&lt;/p&gt;
+
+&lt;p&gt;設定したら,使い方としては調べたい関数などを選択して,キーを押すだけ! そしたらそしたらそれぞれの言語のドキュメントサイト,選択した単語を検索した状態で飛びます.&lt;/p&gt;
+
+&lt;p&gt;こんな感じです.
+まだ紹介できるものはあるのですが,&lt;a href=&quot;http://tak0303.github.com/2012/09/25/how-to-use-sublime.html&quot;&gt;前回の記事&lt;/a&gt;にもかいてあるので,そちらも参考にしていただけると嬉しいです!&lt;/p&gt;
+
+&lt;h2&gt;Tips:&lt;/h2&gt;
+
+&lt;h3&gt;アイコン&lt;/h3&gt;
+
+&lt;p&gt;ところで,SublimeTextのアイコンはどんなものかというと&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/sublime_icon.png&quot; alt=&quot;icon&quot; width=&quot;100px&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;こんな感じです.
+そのままでもいいのですが,SublimeTextの前身,TextMate2のアイコンをみると..&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/textmate.jpeg&quot; alt=&quot;textmate&quot; width=&quot;100px&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ntcncp.blogspot.jp/2012/07/sublime-text2rails.html&quot;&gt;こちらの方&lt;/a&gt;もおっしゃっているんですが,完敗です.SublimeTextのアイコンダサい.&lt;/p&gt;
+
+&lt;p&gt;しかしダサいことはわかっていてもそう簡単に変えることなんて出来ない,画像がない...&lt;/p&gt;
+
+&lt;p&gt;そんなとき,ふとgithubを見ると,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/sublime_8.png&quot; alt=&quot;kami&quot; style=&quot;border:1px solid #ccc;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;....!?!?!?!?!?!?!?&lt;/p&gt;
+
+&lt;p&gt;なんと有志の方がアイコンを作ってました.Githubバンザイ&lt;/p&gt;
+
+&lt;p&gt;この方もデフォルトのアイコンが気に入らなさすぎて作ってしまった様子.&lt;/p&gt;
+
+&lt;p&gt;こちらからダウンロードして,その中の Sublime Text 2.icns がアイコン画像です.&lt;/p&gt;
+
+&lt;p&gt;これを&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/Applications/Sublime\ Text\ 2.app/Contents/Resources/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;にある Sublime Text 2.icns と入れ替えましょう.(元のアイコンはold_とかの名前で残しておくことをおすすめします!)
+このとき名前が違わないか,しっかり確認しましょう.ボクは新しいアイコンの方の名前が　Sublime+Text+2.icns　このように + が入っていて最初うまく出来ませんでした.&lt;/p&gt;
+
+&lt;p&gt;こんな感じのアイコンになりました&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/kami.png&quot; alt=&quot;kami&quot; width=&quot;100px&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;おおお...かっこいい...&lt;/p&gt;
+
+&lt;p&gt;これでSublimeTextを使うモチベーションがさらに高まるかも? 公式の方もアイコンの改善(?)お願いします!&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/articles/sublime-packages-i-like&quot;&gt;個人的におすすめなSublimeTextのプラグイン&lt;/a&gt; was originally published by Takashi Nakagawa at &lt;a href=&quot;&quot;&gt;TAK0303&lt;/a&gt; on October 13, 2012.&lt;/p&gt;</content>
 </entry>
 
 </feed>

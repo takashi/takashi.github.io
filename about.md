@@ -2,5 +2,20 @@
 layout: post-no-feature
 permalink: /about/index.html
 title: Hi.
-tags: [about, Jekyll, theme, responsive]
+tags: [about]
 ---
+
+## I am a
+- Web Developer
+- Triathlete
+
+## I Work(ed) for
+- [Google Japan](https://www.google.co.jp/) (Spe 2013 ~ Current) Web Developer Intern
+- [Lang-8](http://lang-8.com/) (Apr 2013 ~ Current) Frontend Engineer
+- [Beatrobo](https://beatrobo.com) (Feb 2013 ~ Apr 2013) Frontend Engineer
+- [Pixiv](http://www.pixiv.net/) Engineer Summer Intern 2012
+- [Campus inc.](http://campus-inc.org/) (Feb 2012 ~ Jan 2013) Backend & Frontend Engineer
+
+## Products
+- 旅ペディア
+- [本の書き出し](http://kakidashi.com)

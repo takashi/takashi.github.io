@@ -1,0 +1,246 @@
+
+
+<meta charset="utf-8">
+<title>個人的におすすめなSublimeTextのプラグイン &#8211; TAK0303</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="個人的におすすめなSublimeTextのプラグイン &#8211; TAK0303">
+<meta property="og:description" content="[前回書いたSublime Textの記事](http://tak0303.github.com/2012/09/25/how-to-use-sublime.html)が結構いろんな方に読んでもらえて嬉しい限りです.今回はSublim...">
+<meta property="og:url" content="/articles/sublime-packages-i-like">
+<meta property="og:site_name" content="TAK0303">
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="TAK0303 Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Type -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic" rel='stylesheet' type='text/css' />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/assets/css/entypo.css" media="all">
+
+<!-- In order to use Calendas Plus, you must first purchase it. Then, create a font-face package using FontSquirrel.
+<link rel='stylesheet' href='/assets/cal.css' media='all' />
+-->
+
+
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/i.css">
+
+<!-- Fresh Squeezed jQuery -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+
+<div id="bump">
+  <body class="">
+    <header class="site-header darken">
+      <div class="wrap">
+        <hgroup>
+          <h1><a href="/">TAK0303</a></h1>
+        </hgroup>
+        <a href="#nav" class="menu"><span class='icons'>☰</span></a>
+        <nav role="navigation">
+          <ul>
+            <li>
+              <a href="/" title="TAK0303">Home</a>
+            </li>
+            
+            
+                <li><a href="/about" >About</a></li>
+            
+                <li><a href="https://github.com/tak0303" target="_blank">Github</a></li>
+            
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+<section class="article pad-top">
+
+
+
+
+      <article class="wrap post">
+        <header class="post-header">
+          <hgroup>
+            <h1>個人的におすすめなSublimeTextのプラグイン</h1>
+            <p class="date">Oct 13, 2012</p>
+            <p class="intro"></p>
+          </hgroup>
+        </header>
+
+        <p><a href="http://tak0303.github.com/2012/09/25/how-to-use-sublime.html">前回書いたSublime Textの記事</a>が結構いろんな方に読んでもらえて嬉しい限りです.</p>
+
+<p>今回はSublime Textを使っていてボクが個人的におすすめするプラグインとその使用方法などを書いていきたいと思います.</p>
+
+<h2>1. Twitter Bootstrap Snippets</h2>
+
+<p>名前の通り,twitter bootstrapのコードを集めたsnippetです.</p>
+
+<p>前回の記事でも紹介したのですが,個人的にかなり気に入っているので紹介します.</p>
+
+<p>これだけで簡単なサイトのデザインが数行のsnippetのコードで作れてしまうので,お勧めです!</p>
+
+<p>吐き出されたコードを見るだけでも参考になったりもするのではないでしょうか.</p>
+
+<p>一つだけ注意したいのは,自動で吐き出されるtwitter bootstrapのjsのリンク(後でも説明します)のバージョンが少し古いこと.
+最新のバージョンを使いたい場合は自分でリンクを書き換える必要があります.</p>
+
+<p>インストールはpackage controlから twitter bootstrapで検索すれば出てきます.</p>
+
+<p>snippetのコマンド一覧はコマンドパレット(cmd + shift + p)でbootstrapで検索すればみることができます.</p>
+
+<p>こんな感じ</p>
+
+<p><img src="/images/sublime_6.png" alt="tbs"></p>
+
+<p>一応,使えそうなのをいくつか紹介しておきます.
+すべて入力後,tabキーでsnippetが展開されます</p>
+
+<ul>
+<li><p>tbnavbar</p>
+
+<p>よくあるナビゲーションバーを簡単に作成出来る. navbar-fixed-topのクラスだけ足してやると良いかも</p></li>
+<li><p>tbcarousel</p>
+
+<p>スライドショー. 画像はデフォルトでよくわからない画像が入っているのでお好みで.</p></li>
+<li><p>tbaccordion</p>
+
+<p>アコーディオン. クリックしたら下にスライドしてコンテンツが出てくるアレ.</p></li>
+<li><p>tbalert</p>
+
+<p>アラート表示. 汎用性が高いのでいろんなところに使えそう.tbnoticeとかもある.色が違う.</p></li>
+<li><p>tbhero</p>
+
+<p><a href="http://twitter.github.com/bootstrap/examples/hero.html">このページ</a>がそのまま作れる.用途はないかもだが,面白い</p></li>
+</ul>
+
+
+<h2>2.Gist</h2>
+
+<p>GistをSublimeTextから操作するプラグインです.</p>
+
+<p>触ってみたら便利だったので.</p>
+
+<p>インストールはおなじみpackage controlから.</p>
+
+<p>インストールしたら、メニューバーから, preference　→　Package Settings →　Gist → Settings Userで Gist(Github)のユーザ名パスワードを入力. その他の項目は必須ではないので割愛させて頂きます.</p>
+
+<p>操作は簡単 Gistに投稿したいファイルを開いて、コマンドパレットから.Gistを検索.</p>
+
+<p><img src="/images/sublime_7.png" alt="Gist">
+(ボクのはGitが最初になってますが...)</p>
+
+<p>Create Public(Private) Gistを選択,そしたらGistが作成されます.(作成された時,そこに自動で飛べばもっといいんですが...)</p>
+
+<p>作成はこれだけ,簡単です!</p>
+
+<p>もちろんいまあるGistの編集もできます.</p>
+
+<p>コマンドパレットから Gist→ Open Gistで自分のGist一覧がでるので,そこから好きなものを選択,するとSublime上にGistが開けます.</p>
+
+<p>あとはそれを好きに編集して、そのままUpdate Gist, Delete Gistなどが実行できます.</p>
+
+<p>そして,別のファイル上にGistのコードを展開することもできます.</p>
+
+<p>Gist →　Insert GistでGistを選択,するといま開いているファイルにGistのコードが挿入されます.</p>
+
+<p>簡易スニペットのような形で使うこともでき,便利!</p>
+
+<h2>3.GoTo Documentation</h2>
+
+<p>php,javascript(coffeescript),python,Clojure,Go,Smarty,Ruby on Railsのドキュメントが検索できるプラグインです.</p>
+
+<p>インストールはpackage controlから.</p>
+
+<p>インストールしたらまずはキーバインドを設定します.</p>
+
+<p>しなくてもいいのですが,ドキュメントは素早くみたいもの,設定することをおすすめします(しない場合はコマンドパレットから実行できます)</p>
+
+<p>ボクは<a href="https://github.com/kemayo/sublime-text-2-goto-documentation">githubのリポジトリ</a>にかいているキーバインドをそのまま使っています</p>
+
+<p>設定は preference → KeyBindings Userに書きます.</p>
+
+<pre><code>{ "keys": ["super+shift+h"], "command": "goto_documentation" }
+</code></pre>
+
+<p>こんな感じ.</p>
+
+<p>設定したら,使い方としては調べたい関数などを選択して,キーを押すだけ! そしたらそしたらそれぞれの言語のドキュメントサイト,選択した単語を検索した状態で飛びます.</p>
+
+<p>こんな感じです.
+まだ紹介できるものはあるのですが,<a href="http://tak0303.github.com/2012/09/25/how-to-use-sublime.html">前回の記事</a>にもかいてあるので,そちらも参考にしていただけると嬉しいです!</p>
+
+<h2>Tips:</h2>
+
+<h3>アイコン</h3>
+
+<p>ところで,SublimeTextのアイコンはどんなものかというと</p>
+
+<p><img src="/images/sublime_icon.png" alt="icon" width="100px"></p>
+
+<p>こんな感じです.
+そのままでもいいのですが,SublimeTextの前身,TextMate2のアイコンをみると..</p>
+
+<p><img src="/images/textmate.jpeg" alt="textmate" width="100px"></p>
+
+<p><a href="http://ntcncp.blogspot.jp/2012/07/sublime-text2rails.html">こちらの方</a>もおっしゃっているんですが,完敗です.SublimeTextのアイコンダサい.</p>
+
+<p>しかしダサいことはわかっていてもそう簡単に変えることなんて出来ない,画像がない...</p>
+
+<p>そんなとき,ふとgithubを見ると,</p>
+
+<p><img src="/images/sublime_8.png" alt="kami" style="border:1px solid #ccc;"></p>
+
+<p>....!?!?!?!?!?!?!?</p>
+
+<p>なんと有志の方がアイコンを作ってました.Githubバンザイ</p>
+
+<p>この方もデフォルトのアイコンが気に入らなさすぎて作ってしまった様子.</p>
+
+<p>こちらからダウンロードして,その中の Sublime Text 2.icns がアイコン画像です.</p>
+
+<p>これを</p>
+
+<pre><code>/Applications/Sublime\ Text\ 2.app/Contents/Resources/
+</code></pre>
+
+<p>にある Sublime Text 2.icns と入れ替えましょう.(元のアイコンはold_とかの名前で残しておくことをおすすめします!)
+このとき名前が違わないか,しっかり確認しましょう.ボクは新しいアイコンの方の名前が　Sublime+Text+2.icns　このように + が入っていて最初うまく出来ませんでした.</p>
+
+<p>こんな感じのアイコンになりました</p>
+
+<p><img src="/images/kami.png" alt="kami" width="100px"></p>
+
+<p>おおお...かっこいい...</p>
+
+<p>これでSublimeTextを使うモチベーションがさらに高まるかも? 公式の方もアイコンの改善(?)お願いします!</p>
+
+
+      <a class="share" href="https://twitter.com/intent/tweet?text=&quot;個人的におすすめなSublimeTextのプラグイン&quot;%20/articles/sublime-packages-i-like%20via%20&#64;tak0303" data-dnt="true">Share</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      
+
+      </article>
+    </section>
+</div>

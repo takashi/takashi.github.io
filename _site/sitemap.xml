@@ -6,7 +6,19 @@
 
     
     <url>
-        <loc>/articles/test-post</loc>
+        <loc>/days-in-tokyo</loc>
+    </url>
+    
+    <url>
+        <loc>/articles/review</loc>
+    </url>
+    
+    <url>
+        <loc>/articles/kakidashi</loc>
+    </url>
+    
+    <url>
+        <loc>/articles/sublime-packages-i-like</loc>
     </url>
     
 </urlset>

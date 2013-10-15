@@ -23,6 +23,11 @@ links:
   - title: Github
     url: https://github.com/tak0303
     external: true
+  - title: Twitter
+    url: https://twitter.com/tak0303
+    external: true
+  - title: Mail
+    url: mailto:tak1240@gmail.com
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Asia/Tokyo

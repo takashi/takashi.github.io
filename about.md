@@ -21,3 +21,8 @@ tags: [about]
 ## Products
 - 旅ペディア
 - [本の書き出し](http://kakidashi.com)
+
+## Contacts
+- [Twitter](http://twitter.com/tak0303)
+- [Github](https://github.com/tak0303)
+- [Mail](mailto:tak1240@gmail.com)

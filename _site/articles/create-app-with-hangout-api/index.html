@@ -1,0 +1,447 @@
+
+
+<meta charset="utf-8">
+<title>Google Hangout Apiを使ってアプリを作ってみる &#8211; TAK0303</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Google Hangout Apiを使ってアプリを作ってみる &#8211; TAK0303">
+<meta property="og:description" content="Google Hangout、なかなか便利です。ところでこのHangout、APIが公開されていて、だれでも簡単にHangoutを使ったアプリを作ることが出来ます。(今更感がありますが)ただ、あまり親切な解説がなく、使いづらい感じが否...">
+<meta property="og:url" content="/articles/create-app-with-hangout-api">
+<meta property="og:site_name" content="TAK0303">
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="TAK0303 Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Type -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic" rel='stylesheet' type='text/css' />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/assets/css/entypo.css" media="all">
+<link rel="stylesheet" href="/assets/css/pygments.css" media="all">
+
+<!-- In order to use Calendas Plus, you must first purchase it. Then, create a font-face package using FontSquirrel.
+<link rel='stylesheet' href='/assets/cal.css' media='all' />
+-->
+
+
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/i.css">
+
+<!-- Fresh Squeezed jQuery -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+
+<div id="bump">
+  <body class="">
+    <header class="site-header darken">
+      <div class="wrap">
+        <hgroup>
+          <h1><a href="/">TAK0303</a></h1>
+        </hgroup>
+        <a href="#nav" class="menu"><span class='icons'>☰</span></a>
+        <nav role="navigation">
+          <ul>
+            <li>
+              <a href="/" title="TAK0303">Home</a>
+            </li>
+
+            
+                <li><a href="/about" >About</a></li>
+            
+                <li><a href="https://github.com/tak0303" target="_blank">Github</a></li>
+            
+                <li><a href="https://twitter.com/tak0303" target="_blank">Twitter</a></li>
+            
+                <li><a href="mailto:tak1240@gmail.com" >Mail</a></li>
+            
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+<section class="article pad-top">
+
+
+
+
+      <article class="wrap post">
+        <header class="post-header">
+          <hgroup>
+            <h1>Google Hangout Apiを使ってアプリを作ってみる</h1>
+            <p class="date">Oct 16, 2013</p>
+            <p class="intro"></p>
+          </hgroup>
+        </header>
+
+        <p>Google Hangout、なかなか便利です。</p>
+
+<p>ところでこのHangout、APIが公開されていて、だれでも簡単にHangoutを使ったアプリを作ることが出来ます。(今更感がありますが)</p>
+
+<p>ただ、あまり親切な解説がなく、使いづらい感じが否めないです。
+なのでちょっと試す機会があったので、Hangout APIを使って簡単なアプリを作るまでをまとめて見ました。</p>
+
+<p>まず、APIを使うには<a href="https://cloud.google.com/console#/project">Google Cloud Console</a>上で、Projectを作成するところから始めます。</p>
+
+<p><img src="/images/posts/hangoutapp1.png" alt="create project"></p>
+
+<p>Project name, Project IDは特にこだわらなければそのままで大丈夫です。</p>
+
+<p>(二段階認証してるひとだと、このステップで認証をしないといけないかも)</p>
+
+<p>それができたら、Cloud Consoleから APIs &amp; auth → APIsで使用できるAPI一覧が出てくるので、Google+ Hangouts API を ONに。</p>
+
+<p>そうしたらAPIの名前の横に設定ボタンが出てくるので、ここから設定へ。</p>
+
+<p><img src="/images/posts/hangoutapp2.png" alt="create project"></p>
+
+<p>設定ボタンを押すと、Hangouts API設定画面にいきます。
+まずここで設定しないと行けないのが
+- Application URL</p>
+
+<p>だけです。(一番簡単な設定なら)</p>
+
+<p>Application URLとはなにかというと、おおざっぱに言えばHangout上で動かすアプリ本体です。</p>
+
+<p>ただ、形式がXMLだったり、ネット上に公開されている(アクセスできる)ものでないといけなかったり、結構面倒です。</p>
+
+<p>とりあえず、Googleが提供するサンプルアプリをうごかして見ましょう。</p>
+
+<p><code>https://plushangoutstarter.appspot.com/static/simpleHangoutApp.xml</code></p>
+
+<p>このURLをApplication URLに書いて、一番したのSaveを押すと、その下に</p>
+
+<p><code>Enter a hangout in developer sandbox</code></p>
+
+<p>というリンクがでてくるので、そこからアプリをprivateな状態で試すことができます。</p>
+
+<p><img src="/images/posts/hangoutapp3.png" alt="sample project"></p>
+
+<p>認証などをして、こんな感じの画面が出てくればOK！</p>
+
+<p>これで簡単なアプリを動かすところまではできました。</p>
+
+<p>でもこれだけでは面白くないので、ちょっと複雑なこともやってみたい。</p>
+
+<p>そんなときにも、Google はいい感じのsampleを提供してくれています。</p>
+
+<p><code>https://plushangoutstarter.appspot.com/static/faceMovementApp.xml</code></p>
+
+<p>これをApplication URLに登録して、動かすと...</p>
+
+<p><img src="/images/posts/hangoutapp4.png" alt="sample project"></p>
+
+<p>こんな感じに顔認識アプリが動きます！！！！！すごい！！！！！</p>
+
+<p>せっかくなのでソースも見てみましょう。</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="c1">// Keep track of this</span>
+<span class="kd">var</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;canvas&#39;</span><span class="p">);</span>
+
+<span class="c1">// Keep track of recent events.</span>
+<span class="kd">var</span> <span class="nx">lastGoodEvent</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">lastEvent</span><span class="p">;</span>
+
+<span class="c1">// Are we mirroring our face render?</span>
+<span class="kd">var</span> <span class="nx">mirrored</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+<span class="cm">/** Draw face on canvas */</span>
+<span class="kd">function</span> <span class="nx">drawFace</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">bright</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">context</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s1">&#39;2d&#39;</span><span class="p">);</span>
+
+    <span class="nx">context</span><span class="p">.</span><span class="nx">setTransform</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+
+    <span class="c1">// The coordinates are screenspace, from -0.5 - 0.5,</span>
+    <span class="c1">// so start drawing from the middle.</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="mi">338</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+
+    <span class="c1">// We&#39;re going to scale the points by the size</span>
+    <span class="c1">// of my canvas, roughly.  Aspect ratio is usually</span>
+    <span class="c1">// 16:9</span>
+    <span class="kd">var</span> <span class="nx">faceScaleX</span> <span class="o">=</span> <span class="mi">600</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">faceScaleY</span> <span class="o">=</span> <span class="mi">338</span><span class="p">;</span>
+
+    <span class="c1">// Flip our axes as needed.</span>
+    <span class="c1">// All points are in camera-space---they</span>
+    <span class="c1">// are as you look to others, not</span>
+    <span class="c1">// how you look to yourself, since your</span>
+    <span class="c1">// local video feed is mirrored.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">mirrored</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">context</span><span class="p">.</span><span class="nx">scale</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">bright</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">context</span><span class="p">.</span><span class="nx">strokeStyle</span> <span class="o">=</span> <span class="s1">&#39;#FF0000&#39;</span><span class="p">;</span>
+        <span class="nx">context</span><span class="p">.</span><span class="nx">fillStyle</span> <span class="o">=</span> <span class="s1">&#39;#FF0000&#39;</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">context</span><span class="p">.</span><span class="nx">strokeStyle</span> <span class="o">=</span> <span class="s1">&#39;#555555&#39;</span><span class="p">;</span>
+        <span class="nx">context</span><span class="p">.</span><span class="nx">fillStyle</span> <span class="o">=</span> <span class="s1">&#39;#555555&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Draw all the points.</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">beginPath</span><span class="p">();</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">arc</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">leftEyebrowLeft</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span>
+        <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">leftEyebrowLeft</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">arc</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">leftEyebrowRight</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span>
+        <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">leftEyebrowRight</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">arc</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">rightEyebrowLeft</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span>
+        <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">rightEyebrowLeft</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">arc</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">rightEyebrowRight</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span>
+        <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">rightEyebrowRight</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">arc</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">leftEye</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span>
+        <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">leftEye</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">arc</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">rightEye</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span>
+        <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">rightEye</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">arc</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">noseRoot</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span>
+        <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">noseRoot</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">arc</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">noseTip</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span>
+        <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">noseTip</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">arc</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">mouthLeft</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span>
+        <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">mouthLeft</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">arc</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">mouthCenter</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span>
+        <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">mouthCenter</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">arc</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">mouthRight</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span>
+        <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">mouthRight</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">arc</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">upperLip</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span>
+        <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">upperLip</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">fill</span><span class="p">();</span>
+
+    <span class="c1">// Draw all the lines.</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">beginPath</span><span class="p">();</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">leftEyebrowLeft</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span>
+        <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">leftEyebrowLeft</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">leftEyebrowRight</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span>
+        <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">leftEyebrowRight</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">rightEyebrowLeft</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span>
+        <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">rightEyebrowLeft</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">rightEyebrowRight</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span>
+        <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">rightEyebrowRight</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">noseRoot</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">noseRoot</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">noseTip</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">noseTip</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">mouthLeft</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">mouthLeft</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">mouthCenter</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">mouthCenter</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">mouthRight</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">mouthRight</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">upperLip</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">upperLip</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="nx">faceScaleX</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">mouthLeft</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">faceScaleY</span> <span class="o">*</span> <span class="nx">event</span><span class="p">.</span><span class="nx">mouthLeft</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">stroke</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="cm">/** Draws the roll, pan, and tilt of your head. */</span>
+<span class="kd">function</span> <span class="nx">drawRollPanTilt</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">bright</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">context</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s1">&#39;2d&#39;</span><span class="p">);</span>
+    <span class="c1">// Draw eyes</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">bright</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">context</span><span class="p">.</span><span class="nx">strokeStyle</span> <span class="o">=</span> <span class="s1">&#39;#FF0000&#39;</span><span class="p">;</span>
+        <span class="nx">context</span><span class="p">.</span><span class="nx">fillStyle</span> <span class="o">=</span> <span class="s1">&#39;#FF0000&#39;</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">context</span><span class="p">.</span><span class="nx">strokeStyle</span> <span class="o">=</span> <span class="s1">&#39;#555555&#39;</span><span class="p">;</span>
+        <span class="nx">context</span><span class="p">.</span><span class="nx">fillStyle</span> <span class="o">=</span> <span class="s1">&#39;#555555&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">context</span><span class="p">.</span><span class="nx">setTransform</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+
+    <span class="nx">context</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">345</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">beginPath</span><span class="p">();</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">arc</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">stroke</span><span class="p">();</span>
+
+    <span class="nx">context</span><span class="p">.</span><span class="nx">font</span> <span class="o">=</span> <span class="s1">&#39;24pt Arial&#39;</span><span class="p">;</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">textAlign</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">;</span>
+
+    <span class="kd">var</span> <span class="nx">arrowScale</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">fillText</span><span class="p">(</span><span class="s2">&quot;Roll&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">beginPath</span><span class="p">();</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">arc</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">arrowScale</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">stroke</span><span class="p">();</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">beginPath</span><span class="p">();</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">(</span><span class="o">-</span><span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">roll</span><span class="p">)</span> <span class="o">*</span> <span class="nx">arrowScale</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span>
+        <span class="o">-</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">roll</span><span class="p">)</span> <span class="o">*</span> <span class="nx">arrowScale</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">roll</span><span class="p">)</span> <span class="o">*</span> <span class="nx">arrowScale</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span>
+        <span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">roll</span><span class="p">)</span> <span class="o">*</span> <span class="nx">arrowScale</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">stroke</span><span class="p">();</span>
+
+    <span class="kd">var</span> <span class="nx">sign</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">pan</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">fillText</span><span class="p">(</span><span class="s2">&quot;Pan&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">beginPath</span><span class="p">();</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">pan</span> <span class="o">*</span> <span class="nx">arrowScale</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">pan</span> <span class="o">*</span> <span class="nx">arrowScale</span> <span class="o">+</span> <span class="nx">sign</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">pan</span> <span class="o">*</span> <span class="nx">arrowScale</span> <span class="o">+</span> <span class="nx">sign</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">pan</span> <span class="o">*</span> <span class="nx">arrowScale</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">stroke</span><span class="p">();</span>
+
+    <span class="nx">sign</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">tilt</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">textAlign</span> <span class="o">=</span> <span class="s1">&#39;left&#39;</span><span class="p">;</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">fillText</span><span class="p">(</span><span class="s2">&quot;Tilt&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">beginPath</span><span class="p">();</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="nx">event</span><span class="p">.</span><span class="nx">tilt</span> <span class="o">*</span> <span class="nx">arrowScale</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="nx">event</span><span class="p">.</span><span class="nx">tilt</span> <span class="o">*</span> <span class="nx">arrowScale</span> <span class="o">+</span> <span class="nx">sign</span> <span class="o">*</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="nx">event</span><span class="p">.</span><span class="nx">tilt</span> <span class="o">*</span> <span class="nx">arrowScale</span> <span class="o">+</span> <span class="nx">sign</span> <span class="o">*</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="nx">event</span><span class="p">.</span><span class="nx">tilt</span> <span class="o">*</span> <span class="nx">arrowScale</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">stroke</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="cm">/** Per-frame render */</span>
+<span class="kd">function</span> <span class="nx">drawFrame</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">context</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s1">&#39;2d&#39;</span><span class="p">);</span>
+
+    <span class="c1">// Clear the canvas</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">setTransform</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">fillStyle</span> <span class="o">=</span> <span class="s1">&#39;rgb(0,0,0)&#39;</span><span class="p">;</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">fillRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">600</span><span class="p">,</span><span class="mi">400</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">lastGoodEvent</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">drawFace</span><span class="p">(</span><span class="nx">lastGoodEvent</span><span class="p">,</span> <span class="nx">lastEvent</span><span class="p">.</span><span class="nx">hasFace</span><span class="p">);</span>
+        <span class="nx">drawRollPanTilt</span><span class="p">(</span><span class="nx">lastGoodEvent</span><span class="p">,</span> <span class="nx">lastEvent</span><span class="p">.</span><span class="nx">hasFace</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/** Animation loop */</span>
+<span class="kd">function</span> <span class="nx">animate</span><span class="p">(){</span>
+    <span class="nx">drawFrame</span><span class="p">();</span>
+    <span class="c1">// request new frame</span>
+    <span class="nx">requestAnimFrame</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">animate</span><span class="p">();</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="cm">/** Standard requestAnimFrame from paulirish.com, running 30 fps */</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">requestAnimFrame</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nb">window</span><span class="p">.</span><span class="nx">requestAnimationFrame</span> <span class="o">||</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">webkitRequestAnimationFrame</span> <span class="o">||</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">mozRequestAnimationFrame</span> <span class="o">||</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">oRequestAnimationFrame</span> <span class="o">||</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">msRequestAnimationFrame</span> <span class="o">||</span>
+    <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">){</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">callback</span><span class="p">,</span> <span class="mi">1000</span> <span class="o">/</span> <span class="mi">30</span><span class="p">);</span>
+    <span class="p">};</span>
+<span class="p">})();</span>
+
+<span class="cm">/** Event handler */</span>
+<span class="kd">function</span> <span class="nx">onFaceTrackingChanged</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="nx">lastEvent</span> <span class="o">=</span> <span class="nx">event</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">hasFace</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">lastGoodEvent</span> <span class="o">=</span> <span class="nx">event</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;onFaceTrackingChanged: ERROR&quot;</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/** Sets up event handler and shows a topHat</span>
+<span class="cm"> * from the Media app to indicate who is the current</span>
+<span class="cm"> * face tracked.</span>
+<span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">startHeadTracking</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Create hat overlay.</span>
+    <span class="kd">var</span> <span class="nx">topHat</span> <span class="o">=</span> <span class="nx">gapi</span><span class="p">.</span><span class="nx">hangout</span><span class="p">.</span><span class="nx">av</span><span class="p">.</span><span class="nx">effects</span><span class="p">.</span><span class="nx">createImageResource</span><span class="p">(</span>
+        <span class="s1">&#39;http://hangoutmediastarter.appspot.com/static/topHat.png&#39;</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">overlay</span> <span class="o">=</span> <span class="nx">topHat</span><span class="p">.</span><span class="nx">createFaceTrackingOverlay</span><span class="p">(</span>
+        <span class="p">{</span><span class="s1">&#39;trackingFeature&#39;</span><span class="o">:</span>
+         <span class="nx">gapi</span><span class="p">.</span><span class="nx">hangout</span><span class="p">.</span><span class="nx">av</span><span class="p">.</span><span class="nx">effects</span><span class="p">.</span><span class="nx">FaceTrackingFeature</span><span class="p">.</span><span class="nx">NOSE_ROOT</span><span class="p">,</span>
+         <span class="s1">&#39;scaleWithFace&#39;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+         <span class="s1">&#39;rotateWithFace&#39;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+         <span class="s1">&#39;scale&#39;</span><span class="o">:</span> <span class="mf">1.0</span><span class="p">});</span>
+    <span class="nx">overlay</span><span class="p">.</span><span class="nx">setVisible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+    <span class="c1">// Add event handler.</span>
+    <span class="nx">gapi</span><span class="p">.</span><span class="nx">hangout</span><span class="p">.</span><span class="nx">av</span><span class="p">.</span><span class="nx">effects</span><span class="p">.</span><span class="nx">onFaceTrackingDataChanged</span><span class="p">.</span>
+        <span class="nx">add</span><span class="p">(</span><span class="nx">onFaceTrackingChanged</span><span class="p">);</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Started head tracking&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">onMirrorClicked</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">checkbox</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;mirror&#39;</span><span class="p">);</span>
+    <span class="nx">mirrored</span> <span class="o">=</span> <span class="nx">checkbox</span><span class="p">.</span><span class="nx">checked</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// When API is ready...</span>
+  <span class="nx">gapi</span><span class="p">.</span><span class="nx">hangout</span><span class="p">.</span><span class="nx">onApiReady</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span>
+      <span class="kd">function</span><span class="p">(</span><span class="nx">eventObj</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">eventObj</span><span class="p">.</span><span class="nx">isApiReady</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">startHeadTracking</span><span class="p">();</span>
+            <span class="nx">animate</span><span class="p">();</span>
+        <span class="p">}</span>
+      <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="c1">// Wait for gadget to load.</span>
+<span class="nx">gadgets</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">registerOnLoadHandler</span><span class="p">(</span><span class="nx">init</span><span class="p">);</span>
+</code></pre></div>
+
+
+<p>XMLの部分は省きました。(デフォルトそのままで大丈夫だと思います。)</p>
+
+<p>ながいですね！！！
+ながすぎますね！！！！</p>
+
+<p>とりあえず要点だけ</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// When API is ready...</span>
+  <span class="nx">gapi</span><span class="p">.</span><span class="nx">hangout</span><span class="p">.</span><span class="nx">onApiReady</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span>
+    <span class="kd">function</span><span class="p">(</span><span class="nx">eventObj</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">eventObj</span><span class="p">.</span><span class="nx">isApiReady</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">startHeadTracking</span><span class="p">();</span>
+          <span class="nx">animate</span><span class="p">();</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="c1">// Wait for gadget to load.</span>
+<span class="nx">gadgets</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">registerOnLoadHandler</span><span class="p">(</span><span class="nx">init</span><span class="p">);</span>
+</code></pre></div>
+
+
+<p>とりあえずこの２つが重要です。</p>
+
+<p><code>gadgets.uril.registerOnLoadHandler()</code></p>
+
+<p>この関数でhangoutのonloadイベントにバインド出来ます。</p>
+
+<p>引数には任意のinitialization用の関数を渡します。</p>
+
+<p><code>init()</code> 内の <code>gapi.handout.onApiReady.add()</code>で、hagnout apiが使用可能になったときに実行する関数を指定できます。</p>
+
+<p>あとはapiの提供する関数 <code>gapi.hangout.av.effects.onFaceTrackingDataChanged</code>をつかって顔のトラッキングを監視しつつ、結果をcanvasに描画しています。</p>
+
+<p>apiが提供する関数がデータをいいかんじに返してくれるので、あとはそれをほぼそのままcanvasに描画することで手軽に顔認識アプリが作成できます！</p>
+
+<p>と言った感じに、結構簡単にhangoutを通してwebcamを使ったアプリが作成できます。他にもリアルタイムにお絵かきをコラボレーションできたり、顔にエフェクトをかけたりといったこともできるので、試してみてはいかがでしょうか！</p>
+
+
+      <a class="share" href="https://twitter.com/intent/tweet?text=&quot;Google Hangout Apiを使ってアプリを作ってみる&quot;%20/articles/create-app-with-hangout-api%20via%20&#64;tak0303" data-dnt="true">Share</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      
+
+      </article>
+    </section>
+</div>

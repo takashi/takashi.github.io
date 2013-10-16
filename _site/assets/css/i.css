@@ -125,7 +125,7 @@ body {
    ========================================================================== */
 p {
   font-size: 17px;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 .intro {
@@ -232,7 +232,7 @@ blockquote, blockquote p {
 }
 /************ Basic *************/
 body {
-  font-family: "Calendas Plus", "Crimson Text", "Hoefler Text", "Georgia", serif;
+  font-family: "Calendas Plus", "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "Crimson Text",  "Hoefler Text", "Georgia", serif;
   color: #3b3b3b;
   -webkit-font-smoothing: antialiased;
   /* Fix for webkit rendering */

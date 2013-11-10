@@ -19,7 +19,7 @@ tags: [about]
 - [Campus inc.](http://campus-inc.org/) (Feb 2012 ~ Jan 2013) Backend & Frontend Engineer
 
 ## Products
-- 旅ペディア
+- [旅ペディア](http://tabipedia.net)
 - [本の書き出し](http://kakidashi.com)
 
 ## Contacts

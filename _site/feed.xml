@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-<title type="text">TAK0303</title>
+<title type="text">TAKASHI</title>
 <subtitle type="text"></subtitle>
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="/feed.xml" />
-<link rel="alternate" type="text/html" href="" />
-<updated>2013-10-17T00:50:22+09:00</updated>
-<id>/</id>
+<link rel="self" type="application/atom+xml" href="http://takashi.github.io/feed.xml" />
+<link rel="alternate" type="text/html" href="http://takashi.github.io" />
+<updated>2013-11-22T04:50:56+09:00</updated>
+<id>http://takashi.github.io/</id>
 <author>
   <name>Takashi Nakagawa</name>
-  <uri>/</uri>
+  <uri>http://takashi.github.io/</uri>
   <email>tak1240@gmail.com</email>
 </author>
 
 
 <entry>
   <title type="html"><![CDATA[Google Hangout Apiを使ってアプリを作ってみる]]></title>
-  <link rel="alternate" type="text/html" href="/articles/create-app-with-hangout-api" />
-  <id>/articles/create-app-with-hangout-api</id>
+  <link rel="alternate" type="text/html" href="http://takashi.github.io/articles/create-app-with-hangout-api" />
+  <id>http://takashi.github.io/articles/create-app-with-hangout-api</id>
   <published>2013-10-16T00:00:00+09:00</published>
   <updated>2013-10-16T00:00:00+09:00</updated>
   <author>
     <name>Takashi Nakagawa</name>
-    <uri></uri>
+    <uri>http://takashi.github.io</uri>
     <email>tak1240@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;Google Hangout、なかなか便利です。&lt;/p&gt;
@@ -368,19 +368,19 @@
 
 &lt;p&gt;と言った感じに、結構簡単にhangoutを通してwebcamを使ったアプリが作成できます。他にもリアルタイムにお絵かきをコラボレーションできたり、顔にエフェクトをかけたりといったこともできるので、試してみてはいかがでしょうか！&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;/articles/create-app-with-hangout-api&quot;&gt;Google Hangout Apiを使ってアプリを作ってみる&lt;/a&gt; was originally published by Takashi Nakagawa at &lt;a href=&quot;&quot;&gt;TAK0303&lt;/a&gt; on October 16, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://takashi.github.io/articles/create-app-with-hangout-api&quot;&gt;Google Hangout Apiを使ってアプリを作ってみる&lt;/a&gt; was originally published by Takashi Nakagawa at &lt;a href=&quot;http://takashi.github.io&quot;&gt;TAKASHI&lt;/a&gt; on October 16, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[東京に1ヶ月半いました]]></title>
-  <link rel="alternate" type="text/html" href="/days-in-tokyo" />
-  <id>/days-in-tokyo</id>
+  <link rel="alternate" type="text/html" href="http://takashi.github.io/days-in-tokyo" />
+  <id>http://takashi.github.io/days-in-tokyo</id>
   <published>2013-03-31T00:00:00+09:00</published>
   <updated>2013-03-31T00:00:00+09:00</updated>
   <author>
     <name>Takashi Nakagawa</name>
-    <uri></uri>
+    <uri>http://takashi.github.io</uri>
     <email>tak1240@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;2月の初めから一昨日ぐらいまで、東京のBeatrobo(https://beatrobo.com)というところでアルバイト(インターン?)をしていました。&lt;/p&gt;
@@ -420,19 +420,19 @@
 
 &lt;p&gt;ボクは目標とか、夢とかはまだあんまりないのですが、１年前よりかはだいぶましだと思ってます！&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;/days-in-tokyo&quot;&gt;東京に1ヶ月半いました&lt;/a&gt; was originally published by Takashi Nakagawa at &lt;a href=&quot;&quot;&gt;TAK0303&lt;/a&gt; on March 31, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://takashi.github.io/days-in-tokyo&quot;&gt;東京に1ヶ月半いました&lt;/a&gt; was originally published by Takashi Nakagawa at &lt;a href=&quot;http://takashi.github.io&quot;&gt;TAKASHI&lt;/a&gt; on March 31, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[数ヶ月の振り返り(2011/10~2012/5)]]></title>
-  <link rel="alternate" type="text/html" href="/articles/review" />
-  <id>/articles/review</id>
+  <link rel="alternate" type="text/html" href="http://takashi.github.io/articles/review" />
+  <id>http://takashi.github.io/articles/review</id>
   <published>2012-11-21T00:00:00+09:00</published>
   <updated>2012-11-21T00:00:00+09:00</updated>
   <author>
     <name>Takashi Nakagawa</name>
-    <uri></uri>
+    <uri>http://takashi.github.io</uri>
     <email>tak1240@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;evernote見てたらずっと前に書いた振り返りの日記があったので載せた&lt;/p&gt;
@@ -521,7 +521,7 @@
 
 &lt;p&gt;今の自分が何をできるかと言われると、簡単なwebサイトが作れます。としか言えない。自分が胸をはって「これが自分の強みです。」といえるようなシロモノではないし、これからはもっと勉強しないといけないし、していきたい。この数ヶ月で一番得たものがなにかと言えば、ボクは向上心だと思う。まだまだ勉強して、これからもいろんなことに挑戦したい。&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;/articles/review&quot;&gt;数ヶ月の振り返り(2011/10~2012/5)&lt;/a&gt; was originally published by Takashi Nakagawa at &lt;a href=&quot;&quot;&gt;TAK0303&lt;/a&gt; on November 21, 2012.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://takashi.github.io/articles/review&quot;&gt;数ヶ月の振り返り(2011/10~2012/5)&lt;/a&gt; was originally published by Takashi Nakagawa at &lt;a href=&quot;http://takashi.github.io&quot;&gt;TAKASHI&lt;/a&gt; on November 21, 2012.&lt;/p&gt;</content>
 </entry>
 
 </feed>

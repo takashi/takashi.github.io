@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc></loc>
+        <loc>http://takashi.github.io</loc>
     </url>
 
     
     <url>
-        <loc>/articles/create-app-with-hangout-api</loc>
+        <loc>http://takashi.github.io/articles/create-app-with-hangout-api</loc>
     </url>
     
     <url>
-        <loc>/days-in-tokyo</loc>
+        <loc>http://takashi.github.io/days-in-tokyo</loc>
     </url>
     
     <url>
-        <loc>/articles/review</loc>
+        <loc>http://takashi.github.io/articles/review</loc>
     </url>
     
 </urlset>

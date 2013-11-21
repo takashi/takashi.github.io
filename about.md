@@ -24,5 +24,5 @@ tags: [about]
 
 ## Contacts
 - [Twitter](http://twitter.com/tak0303)
-- [Github](https://github.com/tak0303)
+- [Github](https://github.com/takashi)
 - [Mail](mailto:tak1240@gmail.com)

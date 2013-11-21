@@ -1,5 +1,5 @@
-title:            TAK0303
-description:      Blog by tak0303.
+title:            TAKASHI
+description:      Blog by /takashi.
 #Comment out url when working locally to resolve base urls correctly
 url: http://tak0303.github.io
 
@@ -21,7 +21,7 @@ links:
   - title: About
     url: /about
   - title: Github
-    url: https://github.com/tak0303
+    url: https://github.com/takashi
     external: true
   - title: Twitter
     url: https://twitter.com/tak0303

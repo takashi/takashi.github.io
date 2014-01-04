@@ -22,6 +22,9 @@ tags: [about]
 - [旅ペディア](http://tabipedia.net)
 - [本の書き出し](http://kakidashi.com)
 
+## Awards Received
+- [Webフォントアワード2013](http://book.mynavi.jp/wd/webfont/2013/)
+
 ## Contacts
 - [Twitter](http://twitter.com/tak0303)
 - [Github](https://github.com/takashi)

@@ -7,7 +7,7 @@ $ ->
       @template = (info) =>
         imgURL = "https://farm#{info.farm}.staticflickr.com/#{info.server}/#{info.id}_#{info.secret}_b.jpg"
         return """
-          <li><a href="https://www.flickr.com/photos/tak0303/#{info.id}"><img src="#{imgURL}" alt="#{info.id}"></a></li>
+          <li><a href="https://www.flickr.com/photos/tak0303/#{info.id}" target="_blank"><img src="#{imgURL}" alt="#{info.id}"></a></li>
         """
     getTemplateString: =>
       dfd = $.Deferred()
@@ -34,7 +34,7 @@ $ ->
         date = new Date(date).toDateString().split(" ")
         desc = "- #{desc}" unless desc is ""
         """
-          <li><span>&gt; #{date[2]} #{date[1]} #{date[3]}</span><span class="color" style="color:#{color};">●</span> <a href="#{url}" target="_blank">#{title} #{desc}</a></li>
+          <li><span>&gt; #{date[2]} #{date[1]} #{date[3]}</span><span class="color" style="color:#{color};">●</span> <a href="#{url}" target="_blank">#{title}</a><span class="desc"> #{desc}</span></li>
         """
 
     detectLanguageColor: (language) =>

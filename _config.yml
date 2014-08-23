@@ -1,56 +1,10 @@
-title:            TAKASHI
-description:      Blog by /takashi.
-#Comment out url when working locally to resolve base urls correctly
-url: http://takashi.github.io
+# Site settings
+title: takashi
+email: tak1240@gmail.com
+description: my site.
+avatar: http://ja.gravatar.com/userimage/35729278/49f65a5e147ef8802eba86172fa0e1eb.jpg?size=200
+twitter_username: tak0303
+github_username:  takashi
 
-# Owner/author information
-owner:
-  name:           Takashi Nakagawa
-  avatar:         http://ja.gravatar.com/userimage/35729278/49f65a5e147ef8802eba86172fa0e1eb.jpg?size=200
-  bio:            "Web Developer & Triathlete"
-  email:          tak1240@gmail.com
-  twitter:        tak0303
-  github:         takashi
-  instagram:      tak0303
-  # Plug in your disqus shortname!
-
-
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: About
-    url: /about
-  - title: Github
-    url: https://github.com/takashi
-    external: true
-  - title: Twitter
-    url: https://twitter.com/tak0303
-    external: true
-  - title: Mail
-    url: mailto:tak1240@gmail.com
-
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Asia/Tokyo
-future:      true
-pygments:    true
-markdown:    rdiscount
-
-# kramdown:
-#   auto_ids: true
-#   footnote_nr: 1
-#   entity_output: as_char
-#   toc_levels: 1..6
-#   use_coderay: false
-
-#   coderay:
-#     coderay_line_numbers:
-#     coderay_line_numbers_start: 1
-#     coderay_tab_width: 4
-#     coderay_bold_every: 10
-#     coderay_css: class
-
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
+# Build settings
+markdown: kramdown

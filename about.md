@@ -1,17 +1,19 @@
 ---
-layout: post-no-feature
-permalink: /about/index.html
-title: Hi.
-tags: [about]
+layout: page
+title: About
+permalink: /about/
 ---
 
-<img src="{{site.owner.avatar}}" alt="profile" style="width: 100px;">
+<img src="{{site.avatar}}" alt="profile" style="width: 100px;float: right;">
 
 ## I am a
+
 - Web Developer
 - Triathlete
+- Ritsumeikan Univ. Student(CS study)
 
 ## I Work(ed) for
+
 - [Google Japan](https://www.google.co.jp/) (Sep 2013 ~ Dec 2013) Web Developer Intern
 - [Lang-8](http://lang-8.com/) (Apr 2013 ~ Dec 2013) Frontend Engineer
 - [Beatrobo](https://beatrobo.com) (Feb 2013 ~ Apr 2013) Frontend Engineer
@@ -20,6 +22,7 @@ tags: [about]
 
 ## Products
 - [旅ペディア](http://tabipedia.net)
+- [旅メディア](http://media.tabipedia.net)
 - [本の書き出し](http://kakidashi.com)
 
 ## Awards Received

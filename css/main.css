@@ -31,6 +31,7 @@ body {
 
 .site-header {
    overflow: hidden;
+   margin-bottom: 1.5em;
 }
 
 .site-header h1 {
@@ -101,7 +102,8 @@ a:hover { color: #2980B9; }
 
 /* Don't display date if screen is small */
 @media only screen and (max-width: 400px) {
-   .posts li span { display: none; }
+   .posts li .desc { display: none; }
+   /*.post li .color {display: block;}*/
 }
 
 main {

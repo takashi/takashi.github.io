@@ -14,7 +14,7 @@ $ ->
       $.getJSON("https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=52124ad629fb03d96cb28cf8c7d32f1f&user_id=87329744%40N08&format=json&nojsoncallback=1")
         .done( (data) =>
           t = ""
-          t += @template(d) for d in data.photos?.photo
+          t += @template(d) for d in data.photos?.photo[...5]
           dfd.resolve(t)
         )
         .fail( (err) =>

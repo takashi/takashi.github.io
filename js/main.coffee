@@ -47,7 +47,7 @@ $ ->
       $.getJSON('https://api.github.com/users/takashi/gists')
         .done( (data) =>
           t = ""
-          t += @template(d.files[Object.keys(d.files)[0]].filename, d.description, d.html_url, d.created_at, @detectLanguageColor(d.files[Object.keys(d.files)[0]].language)) for d in data[...15]
+          t += @template(d.files[Object.keys(d.files)[0]].filename, d.description, d.html_url, d.created_at, @detectLanguageColor(d.files[Object.keys(d.files)[0]].language)) for d in data[...10]
           dfd.resolve(t)
         )
         .fail( (fail) =>
@@ -59,7 +59,33 @@ $ ->
         $('#js-gist').append(data)
       )
 
+  class Qiita
+    constructor: ->
+      @template = (title, url, date, stock_count) =>
+        date = new Date(date).toDateString().split(" ")
+        """
+          <li><span>&gt; #{date[2]} #{date[1]} #{date[3]}</span> <a href="#{url}" target="_blank">#{title}</a></li>
+        """
+    getTemplateString: =>
+      dfd = $.Deferred()
+      $.getJSON('https://qiita.com/api/v1/users/takashi/items')
+        .done( (data) =>
+          t = ""
+          t += @template(d.title, d.url, d.created_at) for d in data[...5]
+          dfd.resolve(t)
+        )
+        .fail( (fail) =>
+        )
+      return dfd.promise()
+
+    render: =>
+      @getTemplateString().done( (data) =>
+        $('#js-qiita').append(data)
+      )
+
     g = new Gist()
     f = new Flickr()
+    q = new Qiita()
     g.render()
     f.render()
+    q.render()

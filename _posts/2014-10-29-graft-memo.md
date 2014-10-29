@@ -129,9 +129,11 @@ http://www.iij.ad.jp/company/development/tech/activities/spdy/
 
 - ブラウザへのWebサイトのページ読み込み時間を短縮する
 - Webコンテンツの変更を必要としない
-- 存のHTTPサーバと互換性を保ちつつ簡単に順次デプロイ(Drop-in replacement)が可能である
+- 既存のHTTPサーバと互換性を保ちつつ簡単に順次デプロイ(Drop-in replacement)が可能である
 
+しかしDrop-in replacementにはTLSの仕組みが必要なので、既存のサーバが非SSLであり、SPDYの導入を考える場合は、SSLに置き換える必要がある
 
+ref: [http://www.iij.ad.jp/company/development/tech/activities/spdy/](http://www.iij.ad.jp/company/development/tech/activities/spdy/)
 
 
 

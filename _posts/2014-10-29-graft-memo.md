@@ -40,7 +40,7 @@ nodeだと、Dnodeというものもあった
 
 DnodeはnodeでRPCサーバを立てるためのライブラリ
 
-```js
+{% highlight js %}
 var dnode = require('dnode');
 var server = dnode({
     replace: function (s, cb) {
@@ -48,11 +48,11 @@ var server = dnode({
     }
 });
 server.listen(5004);
-```
+{% endhighlight %}
 
 こんな感じでサーバを立てると、クライアントで
 
-```js
+{% highlight js %}
 //client.js
 var dnode = require('dnode');
 
@@ -63,7 +63,7 @@ d.on('remote', function (remote) {
         d.end();
     });
 });
-```
+{% endhighlight %}
 
 このようにremoteのメソッドを叩ける
 
@@ -142,7 +142,7 @@ http://www.iij.ad.jp/company/development/tech/activities/spdy/
 
 足し算をするだけのservice(adder service)
 
-```js
+{% highlight js %}
 var through = require('through2');
 module.exports = function build() {
   return through.obj(function(msg, enc, cb) {
@@ -162,11 +162,11 @@ if (require.main === module) {
     .pipe(module.exports());
 }
 
-```
+{% endhighlight %}
 
 これをclientから遠隔で呼ぶ
 
-```js
+{% highlight js %}
 var graft = require('graft')();
 var spdy  = require('graft/spdy');
 var ret   = graft.ReadChannel();
@@ -177,7 +177,7 @@ graft.write({
   returnChannel: ret
 });
 ret.on('data', console.log); // 4
-```
+{% endhighlight %}
 
 
 
@@ -185,7 +185,7 @@ ret.on('data', console.log); // 4
 
 小さいサンプル
 
-```js
+{% highlight js %}
 var graft = require('graft')();
 var through = require('through2');
 
@@ -198,7 +198,7 @@ graft.pipe(through.obj(function(msg, enc, cb){
 
 graft.write({ hello: 'world' });
 
-```
+{% endhighlight %}
 
 
 
@@ -206,18 +206,18 @@ serverとclient
 
 server
 
-```js
+{% highlight js %}
 var graft = require('graft')();
 var spdy = require('graft/spdy');
 
 graft.pipe(spdy.client({ port: 12345 }));
 
 graft.write({ hello: 'world' });
-```
+{% endhighlight %}
 
 client
 
-```js
+{% highlight js %}
 var graft = require('graft')();
 var spdy = require('graft/spdy');
 var through = require('through2');
@@ -230,7 +230,7 @@ spdy
     // process your request
     cb();
   }));
-```
+{% endhighlight %}
 
 
 `.write`がchannelを通じてstreamにデータを送る?

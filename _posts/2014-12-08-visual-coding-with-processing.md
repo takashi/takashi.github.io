@@ -54,7 +54,7 @@ LiT(Life is Tech!)とは中学生、高校生のためのプログラミング�
 
 線引きたい、とおもったら
 
-{% highlight processing %}
+{% highlight JavaScript %}
 line(x1, y1, x2, y2);
 {% endhighlight %}
 
@@ -62,7 +62,7 @@ line(x1, y1, x2, y2);
 
 0から10の範囲で乱数が欲しいなら
 
-{% highlight processing %}
+{% highlight JavaScript %}
 ramdom(10)
 {% endhighlight %}
 
@@ -95,7 +95,7 @@ Mac, Windows, Linuxそれぞれに対応しているので、各々の環境に�
 
 試しに書いてみる
 
-{% highlight processing %}
+{% highlight JavaScript %}
 // 座標をきめる
 float x = width / 2;
 float y = height / 2;
@@ -113,7 +113,7 @@ ellipse(x, y, width, height);
 
 Processingは`setup()`と`draw()`というメソッドをそれぞれ定義することで、それらがそれぞれが初期化処理と描画処理を担当する。
 
-{% highlight processing %}
+{% highlight JavaScript %}
 
 int start = 0;
 int limit = 100;

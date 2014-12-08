@@ -54,17 +54,17 @@ LiT(Life is Tech!)とは中学生、高校生のためのプログラミング�
 
 線引きたい、とおもったら
 
-```processing
+{% highlight processing %}
 line(x1, y1, x2, y2);
-```
+{% endhighlight %}
 
 これでよい
 
 0から10の範囲で乱数が欲しいなら
 
-```processing
+{% highlight processing %}
 ramdom(10)
-```
+{% endhighlight %}
 
 これでよい。余計なプレフィックスもつかない(大事)
 もしこれが最初に学ぶ言語だったとしても、「何をすれば何ができるのか」がコードから分かりやすい。
@@ -92,4 +92,27 @@ Mac, Windows, Linuxそれぞれに対応しているので、各々の環境に�
 ![{{ site.url }}/image/processing1.png]({{ site.url }}/image/processing1.png)
 
 ここに書いて、左上の実行ボタン（▶）を押すと別ウィンドウで結果が表示される。
+
+試しに書いてみる
+
+{% highlight processing %}
+// 座標をきめる
+float x = width / 2;
+float y = height / 2;
+// 円を書く
+ellipse(x, y, width, height);
+{% endhighlight %}
+
+これを書いて実行すると
+
+![{{ site.url }}/image/processing2.png]({{ site.url }}/image/processing2.png)
+
+こうなる。メディアアート！！！！！！！！！！！
+
+
+
+
+
+
+
 

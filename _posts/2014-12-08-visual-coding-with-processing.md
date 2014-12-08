@@ -1,3 +1,9 @@
+---
+layout: post
+title: Processingで始めるメディアアート入門
+date: 2014-12-08 0:00
+---
+
 Processingで始めるメディアアート入門
 
 この記事は[LiT!関西 Advent Calendar 2014](http://www.adventar.org/calendars/607) 8日目の記事です。
@@ -86,15 +92,4 @@ Mac, Windows, Linuxそれぞれに対応しているので、各々の環境に�
 ![{{ site.url }}/image/processing1.png]({{ site.url }}/image/processing1.png)
 
 ここに書いて、左上の実行ボタン（▶）を押すと別ウィンドウで結果が表示される。
-
-
-
-
-
-
-
-
-
-
-
 

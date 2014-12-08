@@ -109,6 +109,45 @@ ellipse(x, y, width, height);
 
 こうなる。メディアアート！！！！！！！！！！！
 
+もう少し実践的にやってみる。
+
+Processingは`setup()`と`draw()`というメソッドをそれぞれ定義することで、それらがそれぞれが初期化処理と描画処理を担当する。
+
+{% highlight processing %}
+
+int start = 0;
+int limit = 100;
+float x;
+float y;
+float w,h;
+boolean incr = true;
+
+void setup() {
+  size(500, 500);
+  x = width / 2;
+  y = height / 2;
+  w = start;
+  h = start;
+}
+
+void draw() {
+  background(255);
+  if(w > limit){incr = false;}
+  if(w < start){incr = true;}
+  if(incr){
+    w++;
+    h++;
+  }else{
+    w--;
+    h--;
+  }
+  ellipse(x, y, w, h);
+}
+
+{% endhighlight %}¥
+
+円を大きくしたり小さくしたりする。
+少しながいけど、Processingで書くとシンプルで分かりやすいのではないかと思う。
 
 
 

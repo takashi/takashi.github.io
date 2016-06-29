@@ -10,10 +10,12 @@ permalink: /about/
 
 - Web Developer
 - Triathlete
-- Ritsumeikan Univ. Student(CS study)
+- Ritsumeikan Univ. Student(droppped)
+- Teikyo University
 
 ## I Work(ed) for
 
+- [div](http://di-v.co.jp/)(Mar 2015 ~ Jun 2016) Cheif Engineer
 - [Google Japan](https://www.google.co.jp/) (Sep 2013 ~ Dec 2013) Web Developer Intern
 - [Lang-8](http://lang-8.com/) (Apr 2013 ~ Dec 2013) Frontend Engineer
 - [Beatrobo](https://beatrobo.com) (Feb 2013 ~ Apr 2013) Frontend Engineer

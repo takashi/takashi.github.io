@@ -22,7 +22,7 @@ src: url('../fonts/mplus-1m-light.ttf')
 }
 
 body {
-   background-color: #ecf0f1;
+   background-color: #FAFEFF;
    font: 13.34px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
    font-size: small;
    -webkit-font-smoothing: antialiased;
@@ -137,6 +137,10 @@ header a {
 
 .title {
    margin-top: .4em;
+}
+
+.post-title {
+   font-size: 140%;
 }
 
 .meta {

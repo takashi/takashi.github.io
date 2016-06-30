@@ -46,6 +46,5 @@ permalink: /about/
 - [Webフォントアワード2013 グランプリ](http://book.mynavi.jp/wd/webfont/2013/)
 
 ## Contacts
-- [Twitter](http://twitter.com/tak0303)
 - [Github](https://github.com/takashi)
 - [Mail](mailto:tak1240@gmail.com)

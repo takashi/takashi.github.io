@@ -27,7 +27,6 @@ permalink: /about/
 ### Created
 
 - [旅ペディア](http://tabipedia.net)
-- [旅メディア](http://media.tabipedia.net)
 - [本の書き出し](http://kakidashi.com)
 - [Colors](https://colors.today)
 

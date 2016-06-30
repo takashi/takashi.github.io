@@ -8,8 +8,8 @@ permalink: /about/
 
 ## I am a
 
-- Web Developer
-- Triathlete
+- Application Engineer
+- Outdoorsy
 - Ritsumeikan Univ. Student(droppped)
 - Teikyo University
 
@@ -26,9 +26,15 @@ permalink: /about/
 - [旅ペディア](http://tabipedia.net)
 - [旅メディア](http://media.tabipedia.net)
 - [本の書き出し](http://kakidashi.com)
+- [Beatrobo](https://corp.beatrobo.com/ja/)
+- [Colors](https://colors.today)
+- [TECH::WORK](https://tech-work.in)
+
+## Publishment
+- [週刊東洋経済 プログラミング特集監修](http://store.toyokeizai.net/magazine/toyo/20160516)
 
 ## Awards Received
-- [Webフォントアワード2013](http://book.mynavi.jp/wd/webfont/2013/)
+- [Webフォントアワード2013 グランプリ](http://book.mynavi.jp/wd/webfont/2013/)
 
 ## Contacts
 - [Twitter](http://twitter.com/tak0303)

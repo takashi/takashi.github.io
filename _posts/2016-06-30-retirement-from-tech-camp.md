@@ -31,7 +31,7 @@ TECH::CAMPは主にWebアプリケーションコースとiOSアプリケーシ�
 
 あとは内部システムがRailsで構築されており、テストカバレッジを上げたり、システムの改修を担当しました。
 
-[温かみのある主導デプロイをチャットから自動化したり、負債になりがちなAsset Pipelineをwebpackで置き換えたり](http://qiita.com/takashi/items/38c37df8fb94f147dae4)
+[温かみのある手動デプロイをチャットから自動化したり、負債になりがちなAsset Pipelineをwebpackで置き換えたり](http://qiita.com/takashi/items/38c37df8fb94f147dae4)
 
 もしていました。
 

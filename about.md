@@ -33,7 +33,9 @@ permalink: /about/
 
 ### Perticipated
 
-- [Beatrobo](https://corp.beatrobo.com/ja/)
+- [Beatrobo](https://corp.beatrobo.com/ja)
+- [Lang-8](http://lang-8.com)
+- [HiNative](https://hinative.com)
 - [TECH::WORK](https://tech-work.in)
 - [TECH::CAMP](https://tech-camp.in)
 

@@ -16,8 +16,8 @@ permalink: /about/
 ## I Work(ed) for
 
 - [div](http://di-v.co.jp/) (Mar 2015 ~ Jun 2016) Cheif Engineer
+- [Lang-8](http://lang-8.com/) (Apr 2013 ~ Dec 2013, Apr 2014 ~ Feb 2015) Frontend Engineer
 - [Google Japan](https://www.google.co.jp/) (Sep 2013 ~ Dec 2013) Web Developer Intern
-- [Lang-8](http://lang-8.com/) (Apr 2013 ~ Dec 2013) Frontend Engineer
 - [Beatrobo](https://beatrobo.com) (Feb 2013 ~ Apr 2013) Frontend Engineer
 - [Pixiv](http://www.pixiv.net/) Engineer Summer Intern 2012
 - [Campus inc.](http://campus-inc.org/) (Feb 2012 ~ Jan 2013) Backend & Frontend Engineer

@@ -15,6 +15,7 @@ permalink: /about/
 
 ## I Work(ed) for
 
+- [Increments](http://increments.co.jp/) (Jul 2016 ~) Application Engineer
 - [div](http://di-v.co.jp/) (Mar 2015 ~ Jun 2016) Chief Engineer
 - [Lang-8](http://lang-8.com/) (Apr 2013 ~ Dec 2013, Apr 2014 ~ Feb 2015) Frontend Engineer
 - [Google Japan](https://www.google.co.jp/) (Sep 2013 ~ Dec 2013) Web Developer Intern

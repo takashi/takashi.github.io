@@ -1,4 +1,4 @@
-baseURL = "http://takashi.im/"
+baseURL = "https://takashi.im/"
 languageCode = "en-us"
 title = "takashi.im"
 theme = "product"

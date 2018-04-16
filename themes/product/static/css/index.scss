@@ -1,0 +1,180 @@
+@import '../../node_modules/normalize.scss/normalize.scss';
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+$width: 800px;
+
+body {
+  width: $width;
+  margin: 0 auto;
+  height: 1000px;
+  // font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Noto Sans Japanese', sans-serif;
+}
+
+.heading {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #606060;
+}
+
+.logo {
+  margin: 0;
+  font-weight: normal;
+  font-size: 1rem;
+
+  a {
+    text-decoration: none;
+    color: #606060;
+  }
+}
+
+.globalHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+
+  &__navigation {
+    margin: 0;
+
+    &__list {
+      margin: 0;
+      padding: 0;
+      display: flex;
+
+      &__item {
+        list-style-type: none;
+      }
+
+      &__item > a {
+        text-decoration: none;
+        margin-left: 3rem;
+        color: #ABABAB;
+
+        &-selected {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.introduction {
+  margin: 4rem 0;
+
+  &__date {
+    color: #D8D8D8;
+  }
+
+  &__name {
+    font-size: 3rem;
+    margin: .5rem 0;
+    &__bold {
+      font-weight: bold;
+    }
+  }
+
+  &__description {
+    color: #7E7E7E;
+    line-height: 1.6;
+
+    a {
+      color: #7E7E7E;
+    }
+  }
+}
+
+.works {
+  &__title {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  &__items {
+    margin-top: 2rem;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 3rem;
+
+    &__date {
+      color: #D8D8D8;
+    }
+
+    &__title {
+      margin: 0;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    &__url {
+      text-decoration: none;
+      color: #8d8d8d;
+      font-size: 1rem;
+    }
+
+    &__content {
+      p {
+        margin: .3rem 0;
+        color: #606060;
+      }
+    }
+  }
+}
+
+.post {
+  margin-top: 5rem;
+
+  &__title {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 3rem;
+
+    &__date {
+      color: #D8D8D8;
+    }
+
+    &__info {
+      margin-bottom: 2rem;
+    }
+
+    &__title {
+      margin: 0;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    &__url {
+      text-decoration: none;
+      color: #606060;
+      font-size: 1rem;
+    }
+  }
+
+  &__body {
+    img {
+      width: 100%;
+    }
+
+    margin-bottom: 10rem;
+  }
+}
+
+@media (max-width: $width) {
+  body {
+    width: calc(100% - 2rem);
+    padding: 0 1rem;
+    font-size: 14px;
+  }
+
+  .works__item__title a {
+    word-break: break-all;
+  }
+}

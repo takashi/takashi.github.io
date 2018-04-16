@@ -1,0 +1,24 @@
+baseURL = "http://takashi.im/"
+languageCode = "en-us"
+title = "takashi.im"
+theme = "product"
+hasCJKLanguage = "true"
+copyright = "&copy; <a href=\"https://github.com/takashi\">Takashi Nakagawa</a> 2018"
+
+[params.info]
+homeTitle = 'takashi.im'
+
+[params.introduction]
+birthdate = '1993-03-03'
+firstName = "Takashi"
+lastName = "Nakagawa"
+description = "<a href=\"/about\">Takashi Nakagawa</a> is a developer based on Tokyo, Japan. <br> Works at Campfire, inc. and works as freelance. <br> Has Experience as Software engineer for 5 years. <br> Organize <a href=\"https://hashic.co\" target=\"_blank\">hashic.co</a>"
+
+
+[params.social]
+
+twitter = "tak0303"
+github = "takashi"
+linkedin = "takashi-nakagawa"
+facebook = "tak0303"
+instagram = "tak0303"

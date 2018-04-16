@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head" . }}
+<body>
+  {{ partial "header" . }}
+  <main>
+    <div class="introduction">
+      <span class="introduction__date">{{ .Site.Params.Introduction.Birthdate }} ~</span>
+      <div class="introduction__name heading">
+        <span class="introduction__name__bold">{{ .Site.Params.Introduction.FirstName }}</span> {{ .Site.Params.Introduction.LastName }}
+      </div>
+      <div class="introduction__description">
+         {{ .Site.Params.Introduction.Description | safeHTML }}
+      </div>
+    </div>
+    <div class="works heading">
+      <div class="works__items">
+        {{ range (where .Data.Pages "Section" "works") }}
+          <article class="works__item">
+            <div class="works__item__info">
+              <span class="works__item__date">{{ .Date.Format "2006-01" }}</span>
+              <h2 class="works__item__title"><a href="http://{{ .Params.Host }}" class="heading">{{ .Title }}</a></h2>
+              <span class="works__item__content">{{ .Content }}</span >
+              <a href="http://{{ .Params.Host }}" class="works__item__url" target="_blank">{{ .Params.Host }}</a>
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head" . }}
+<body>
+{{ partial "header" . }}
+<section class="post">
+  <div class="post__item__info">
+    <h2 class="post__item__title">
+      <a href="{{ .Permalink }}" class="heading">{{ .Title }}</a>
+    </h2>
+  </div>
+  <div class="post__body">
+     {{ .Content }}
+  </div>
+</section>
+</body>
+</html>

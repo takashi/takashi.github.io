@@ -1,0 +1,11 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> {{ if eq .IsHome false }}
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  {{ else }}
+  <title>{{ .Site.Params.Info.homeTitle }}</title>
+  {{ end }}
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/index.css" /> {{- range .Site.Params.Assets.customCSS -}}
+  <link rel='stylesheet' href='{{ . | absURL }}'> {{- end -}}
+</head>

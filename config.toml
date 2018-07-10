@@ -12,7 +12,7 @@ homeTitle = 'takashi.im'
 birthdate = '1993-03-03'
 firstName = "Takashi"
 lastName = "Nakagawa"
-description = "<a href=\"/about\">Takashi Nakagawa</a> is a developer based on Tokyo, Japan. <br> Works at Campfire, inc. and works as freelance. <br> Has Experience as Software engineer for 5 years. <br> Organize <a href=\"https://hashic.co\" target=\"_blank\">hashic.co</a>"
+description = "<a href=\"/about\">Takashi Nakagawa</a> is a developer based on Tokyo, Japan. <br> Works at CAMPFIRE, Inc. and works as freelance. <br> Has Experience as Software engineer for 5 years. <br> Organize <a href=\"https://hashic.co\" target=\"_blank\">hashic.co</a>"
 
 
 [params.social]

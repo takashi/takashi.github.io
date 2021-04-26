@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "takashi.im"
 theme = "product"
 hasCJKLanguage = "true"
-copyright = "&copy; <a href=\"https://github.com/takashi\">Takashi Nakagawa</a> 2018"
+copyright = "&copy; <a href=\"https://github.com/takashi\">Takashi Nakagawa</a> 2021"
 
 [params.info]
 homeTitle = 'takashi.im'
@@ -12,7 +12,7 @@ homeTitle = 'takashi.im'
 birthdate = '1993-03-03'
 firstName = "Takashi"
 lastName = "Nakagawa"
-description = "<a href=\"/about\">Takashi Nakagawa</a> is a developer based on Tokyo, Japan. <br> Works at NowDo, Inc. and works as freelance. <br> Has Experience as Software engineer for 5 years. <br> Organize <a href=\"https://hashic.co\" target=\"_blank\">hashic.co</a>"
+description = "<a href=\"/about\">Takashi Nakagawa</a> is a developer based on Kanagawa, Japan. <br> Works at NowDo, Inc. and works as freelance. <br> Has Experience as Software engineer for 10 years. <br> Organize <a href=\"https://hashic.co\" target=\"_blank\">hashic.co</a>"
 
 
 [params.social]
